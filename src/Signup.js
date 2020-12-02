@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 
@@ -54,7 +53,7 @@ const MySelect = ({ label, ...props }) => {
 const Signup = () => {
   return (
     <>
-      <h1>Subscribe!</h1>
+      <h1>Sign up!</h1>
       <Formik
         initialValues={{
           firstName: "",
