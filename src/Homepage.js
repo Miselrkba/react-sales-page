@@ -28,8 +28,13 @@ function Homepage() {
         <h1 className="feature-header">Feature2</h1>
         <h1 className="feature-header">Feature3</h1>
       </div>
-      <div className="purple footer">Are you ready ...? Send us a message below</div>
+      <div className="purple footer">
+        Are you ready ...? Send us a message below
+      </div>
       <button className="btn">Contact Us</button>
+      <Link to="/signup">
+        <button className="btn">Sign up</button>
+      </Link>
     </div>
   );
 }

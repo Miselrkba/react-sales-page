@@ -4,6 +4,7 @@ import Feature1 from "./Feature1";
 import Feature2 from "./Feature2";
 import Feature3 from "./Feature3";
 import Homepage from "./Homepage";
+import Signup from "./Signup";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/feature1" component={Feature1} />
         <Route exact path="/feature2" component={Feature2} />
         <Route exact path="/feature3" component={Feature3} />
+        <Route exact path="/signup" component={Signup} />
       </Switch>
     </>
   );
