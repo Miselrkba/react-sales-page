@@ -88,7 +88,7 @@ const Signup = () => {
           <div>{formik.errors.email}</div>
         ) : null}
         <div className="button-container">
-          <button type="submit">Submit</button>
+          <button className='btn' type="submit">Submit</button>
         </div>
       </form>
     </section>

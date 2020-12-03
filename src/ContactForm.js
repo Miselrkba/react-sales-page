@@ -84,7 +84,7 @@ const ContactForm = () => {
           <span className="errorText">{formik.errors.message}</span>
         ) : null}
         <div className="button-container">
-          <button type="submit">Send message</button>
+          <button type="submit" className='btn'>Send message</button>
         </div>
       </form>
     </section>
