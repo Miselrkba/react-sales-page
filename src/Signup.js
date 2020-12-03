@@ -3,6 +3,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const Signup = () => {
+  const initialValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+  };
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -22,10 +28,16 @@ const Signup = () => {
       alert(JSON.stringify(values, null, 2));
     },
   });
+
+  const handleSubmit = () => {
+    formik.handleSubmit();
+    formik.resetForm()
+  };
+
   return (
     <>
       <h1>Sign up!</h1>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div>
           <input
             id="firstName"
