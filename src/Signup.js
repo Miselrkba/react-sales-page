@@ -1,14 +1,9 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import "./Signup.css";
 
 const Signup = () => {
-  const initialValues = {
-    firstName: "",
-    lastName: "",
-    email: "",
-  };
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -29,16 +24,22 @@ const Signup = () => {
     },
   });
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formik.values.firstName || !formik.values.lastName) {
+      return;
+    }
     formik.handleSubmit();
-    formik.resetForm()
+    formik.resetForm();
   };
 
   return (
-    <>
-      <h1>Sign up!</h1>
+    <section className="form-style">
+      <div>
+        <h1>Sign up!</h1>
+      </div>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="input-container">
           <input
             id="firstName"
             name="firstName"
@@ -52,7 +53,7 @@ const Signup = () => {
         {formik.touched.firstName && formik.errors.firstName ? (
           <div>{formik.errors.firstName}</div>
         ) : null}
-        <div>
+        <div className="input-container">
           <input
             id="lastName"
             name="lastName"
@@ -66,7 +67,7 @@ const Signup = () => {
         {formik.touched.lastName && formik.errors.lastName ? (
           <div>{formik.errors.lastName}</div>
         ) : null}
-        <div>
+        <div className="input-container">
           <input
             id="email"
             name="email"
@@ -80,11 +81,11 @@ const Signup = () => {
         {formik.touched.email && formik.errors.email ? (
           <div>{formik.errors.email}</div>
         ) : null}
-        <div>
+        <div className="button-container">
           <button type="submit">Submit</button>
         </div>
       </form>
-    </>
+    </section>
   );
 };
 

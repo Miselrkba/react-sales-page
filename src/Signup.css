@@ -1,0 +1,17 @@
+.form-style {
+  margin: 2em;
+  height: 20em;
+  color: white;
+  margin-top: 0em;
+  margin-left: 10em;
+  margin-right: 10em;
+  background: blueviolet;
+}
+h1{
+    padding: 0.5em;
+    margin-bottom: 0.2em;
+}
+.input-container{
+    padding: 0.5em;
+    /* font-size: large; */
+}
