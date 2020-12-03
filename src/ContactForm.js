@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./ContactForm.css";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -35,7 +36,12 @@ const ContactForm = () => {
 
   return (
     <section className="contact-form-style">
-      <div>
+      <div className="back-button">
+        <Link to="/">
+          <button className="btn">Back</button>
+        </Link>
+      </div>
+      <div className="form-header-container">
         <h1>Contact us</h1>
       </div>
       <form onSubmit={formik.handleSubmit}>

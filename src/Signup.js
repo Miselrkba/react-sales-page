@@ -2,6 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "./Signup.css";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const formik = useFormik({
@@ -35,7 +36,12 @@ const Signup = () => {
 
   return (
     <section className="form-style">
-      <div>
+      <div className='back-button'>
+      <Link to="/">
+        <button className="btn">Back</button>
+      </Link>
+      </div>
+      <div className="form-header-container">
         <h1>Sign up!</h1>
       </div>
       <form onSubmit={handleSubmit}>
