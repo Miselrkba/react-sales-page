@@ -29,9 +29,14 @@ function Homepage() {
         <h1 className="feature-header">Feature3</h1>
       </div>
       <div className="purple footer">
-        Are you ready ...? Send us a message below
+        <p style={{ padding: "1px" }}>
+          {" "}
+          Are you ready ...? Send us a message below
+        </p>
       </div>
-      <button className="btn">Contact Us</button>
+      <Link to="/contact">
+        <button className="btn">Contact Us</button>
+      </Link>
       <Link to="/signup">
         <button className="btn">Sign up</button>
       </Link>

@@ -1,6 +1,6 @@
 .form-style {
   margin: 2em;
-  height: 20em;
+  height: 18em;
   color: white;
   margin-top: 0em;
   margin-left: 10em;
@@ -13,5 +13,4 @@ h1{
 }
 .input-container{
     padding: 0.5em;
-    /* font-size: large; */
 }

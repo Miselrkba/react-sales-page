@@ -14,7 +14,7 @@ body {
 .navbar {
   display: flex;
   margin: 2em;
-  height: 10em;
+  height: 9em;
   justify-content: center;
   align-items: center;
   color: white;
@@ -63,7 +63,8 @@ body {
   margin: 2em;
   margin-left: 14em;
   margin-right: 14em;
-  height: 2em;
+  height: 3em;
+  align-items: center;
 }
 .btn {
   color: white;
